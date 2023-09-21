@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: aliceblue;
+        }
+        .calculator{
+            width: 300px;
+            height: 400px;
+            box-shadow:  -4px -3px 5px
+            rgb(192, 192 ,192),
+            4px 3px 5px rgb(192, 192 ,192);
+            overflow: hidden;
+            /* border: 1px solid red; */
+            border-radius: 10px;
+        }
+        .calculator .txt{
+            width: 88%;
+            height: 8vh;
+            margin:  15px 10px 7px 16px;
+            background-color: #fff;
+            border: none;
+            outline: none;
+            color: black;
+            font-size: 18px;
+            text-align: right;
+            box-shadow: inset -8px -8px 5px
+            rgba(230, 227, 277, 0.755),
+            inset 8px 8px 5px rgba(230, 225, 225);
+            border: 1px solid rgb(203, 2, 221);
+            border-radius: 5px;
+        }
+        .calculator .buttons{
+            margin: 0 13px 0 10px;
+        }
+        .calculator .btn{
+            width: 58px;
+            height: 48px;
+            margin: 10px 0 0 7px;
+            border-radius: 10px;
+            border: none;
+            background-color: #fff;
+            box-shadow:  -4px -3px 5px
+            rgb(192, 192 ,192),
+            4px 3px 5px rgb(192, 192 ,192);
+            color: #000;
+            font-weight: 700;
+            font-size: 17px;
+            cursor: pointer;
+            text-align: center;
+            border: 1px solid red;
+        }
+        .calculator .clear-btn{
+            background-color: green;
+            width: 131px;
+        }
+        .calculator .plus{
+            background-color: red;
+        }
+        .calculator .equal{
+            background-color: aqua;
+            width: 131px;
+        }
+        .calculator .multi{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <form action="" name="form" class="calculator">
+        <input type="text" name="result" class="txt">
+        <div class="buttons">
+        
+        <input type="button" class="btn clear-btn" value="Clear All" onclick="form.result.value = '' ">
+        <input type="button" class="btn" value="/" onclick="form.result.value += '/' ">
+        <input type="button" class="btn multi" value="*" onclick="form.result.value += '*' ">
+        <input type="button" class="btn" value="7" onclick="form.result.value += '7' ">
+        <input type="button" class="btn" value="8" onclick="form.result.value += '8' ">
+        <input type="button" class="btn" value="9" onclick="form.result.value += '9' ">
+        <input type="button" class="btn" value="-" onclick="form.result.value += '-' ">
+        <input type="button" class="btn" value="4" onclick="form.result.value += '4' ">
+        <input type="button" class="btn" value="5" onclick="form.result.value += '5' ">
+        <input type="button" class="btn" value="6" onclick="form.result.value += '6' ">
+        <input type="button" class="btn plus" value="+" onclick="form.result.value += '+' ">
+        <input type="button" class="btn" value="1" onclick="form.result.value += '1' ">
+        <input type="button" class="btn" value="2" onclick="form.result.value += '2' ">
+        <input type="button" class="btn" value="3" onclick="form.result.value += '3' ">
+        <input type="button" class="btn" value="0" onclick="form.result.value += '0' ">
+        <input type="button" class="btn" value="00" onclick="form.result.value += '00' ">
+        <input type="button" class="btn" value="." onclick="form.result.value += '.' ">
+        <input type="button" class="btn equal" value="=" onclick="form.result.value = eval(form.result.value)">
+    </div>
+    </form>
+</body>
+</html>
